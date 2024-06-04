@@ -2,7 +2,11 @@
 // Created by 孙昊 on 2024/6/4.
 //
 
-#ifndef NET_NETIF_PCAP_H
-#define NET_NETIF_PCAP_H
+#ifndef NETIF_PCAP_H
+#define NETIF_PCAP_H
 
-#endif //NET_NETIF_PCAP_H
+#include "net_err.h"
+
+net_err_t netif_pcap_open(void);
+
+#endif

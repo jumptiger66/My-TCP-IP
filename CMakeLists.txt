@@ -6,8 +6,8 @@ project(net)
 set(CMAKE_C_STANDARD 99)
 
 LINK_DIRECTORIES(
-    ${PROJECT_SOURCE_DIR}/npcap/Lib/x64          # win64使用
-    #${PROJECT_SOURCE_DIR}/lib/npcap/Lib/             # win32使用
+        ${PROJECT_SOURCE_DIR}/npcap/Lib/x64          # win64使用
+        #${PROJECT_SOURCE_DIR}/lib/npcap/Lib/             # win32使用
 )
 
 # 给visual studio编译器使用的宏，Enable GCC debug
@@ -17,7 +17,7 @@ add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 include_directories(
         ${PROJECT_SOURCE_DIR}
         ${PROJECT_SOURCE_DIR}/npcap/Include          # pcap路径
-        ${PROJECT_SOURCE_DIR}/src/net/net 
+        ${PROJECT_SOURCE_DIR}/src/net/net
         ${PROJECT_SOURCE_DIR}/src/plat
         ${PROJECT_SOURCE_DIR}/src/app
 )
@@ -26,7 +26,10 @@ include_directories(
 file(GLOB_RECURSE SOURCE_LIST "src/*.c" "src/*.h")
 
 # 将源文件列表加入到工程中
-add_executable(${PROJECT_NAME} ${SOURCE_LIST})
+add_executable(${PROJECT_NAME} ${SOURCE_LIST}
+        src/net/src/exmsg.c
+        src/plat/netif_pcap.h
+        src/plat/netif_pcap.c)
 
 # 与一些库进行编译链接，生成最终的程序
 # 针对网络的平台配置
@@ -41,5 +44,3 @@ else()
     add_definitions(-DSYS_PLAT_LINUX)
     target_link_libraries(${PROJECT_NAME} pthread pcap)
 endif()
-
-

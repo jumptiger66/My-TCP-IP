@@ -1,8 +1,12 @@
 //
 // Created by 孙昊 on 2024/6/4.
 //
+#ifndef EXMSG_H
+#define EXMSG_H
 
-#ifndef NET_EXMSG_H
-#define NET_EXMSG_H
+#include "net_err.h"
 
-#endif //NET_EXMSG_H
+net_err_t exmsg_init(void);
+net_err_t exmsg_start(void);
+
+#endif
