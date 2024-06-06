@@ -29,7 +29,10 @@ file(GLOB_RECURSE SOURCE_LIST "src/*.c" "src/*.h")
 add_executable(${PROJECT_NAME} ${SOURCE_LIST}
         src/net/src/exmsg.c
         src/plat/netif_pcap.h
-        src/plat/netif_pcap.c)
+        src/plat/netif_pcap.c
+        src/net/net/dbg.h
+        src/net/net/dbg.h
+        src/net/src/dbg.c)
 
 # 与一些库进行编译链接，生成最终的程序
 # 针对网络的平台配置

@@ -138,6 +138,7 @@ typedef struct timeval net_time_t;      // 时间类型
 #define plat_sprintf        sprintf
 #define plat_vsprintf       vsprintf
 #define plat_printf         printf
+#define plat_vsnprintf       vsnprintf
 
 typedef struct _xsys_sem_t {
     int count;                          // 信号量计数

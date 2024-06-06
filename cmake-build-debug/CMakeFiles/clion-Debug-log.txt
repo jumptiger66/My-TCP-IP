@@ -1,5 +1,5 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/sunhao/anaconda3/bin/ninja -G Ninja -S /Users/sunhao/Desktop/C_CodeTest/diy-tcpip-master/code/start -B /Users/sunhao/Desktop/C_CodeTest/diy-tcpip-master/code/start/cmake-build-debug
 -- current platform: Darwin
--- Configuring done (0.0s)
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/sunhao/Desktop/C_CodeTest/diy-tcpip-master/code/start/cmake-build-debug

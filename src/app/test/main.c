@@ -12,6 +12,7 @@
 #include "sys_plat.h"
 #include "net.h"
 #include "netif_pcap.h"
+#include "dbg.h"
 
 net_err_t netdev_init(void ){
     netif_pcap_open();
@@ -19,7 +20,14 @@ net_err_t netdev_init(void ){
     return NET_ERR_OK;
 }
 
+#define DBG_TEST  DBG_LEVEL_INFO
+
 int main (void) {
+    dbg_info(DBG_TEST, "dbg_info");
+    dbg_warning(DBG_TEST, "dbg_warning");
+    dbg_error(DBG_TEST, "dbg_error");
+    dbg_assert(1==0, "failed");
+
     net_init();
     net_start();
 
