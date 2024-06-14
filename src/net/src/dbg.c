@@ -11,9 +11,10 @@ void dbg_print(int m_level, int s_level, const char * file, const char * func, i
      * param: m_level, 当前模块需要的调试等级
      * param: s_level, 调试打印函数的默认等级（如dbg_warning默认等级就是DBG_LEVEL_WARNING）
      * param: file, 指向路径字符串首部的指针（也是字符串）
-     * param: func,
+     * param: func, 函数名字
      * param: len, 信息提示的具体行号
-     * param: fmt, 有格式的提示信息（字符串）
+     * param: fmt, 有格式的提示信息（带格式字符串）
+     * param: ..., 可变参数，传入 fmt 字符串后打印
      */
 
     static const char * title[] = {
@@ -47,5 +48,4 @@ void dbg_print(int m_level, int s_level, const char * file, const char * func, i
         plat_printf("%s\n"DBG_STYLE_RESET, str_buf);
         va_end(args);
      }
-
 }

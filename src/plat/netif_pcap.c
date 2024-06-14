@@ -4,14 +4,15 @@
 
 #include "netif_pcap.h"
 #include "sys_plat.h"
-#include "net_err.h"
+#include "exmsg.h"
 
 
 void recv_thread(void * arg){
     plat_printf("recv thread is running ...\n");
 
     while (1){
-        sys_sleep(1);
+        sys_sleep(100);
+        exmsg_netif_in(); // 模拟收到网卡信息
     }
 }
 

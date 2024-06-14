@@ -32,7 +32,19 @@ add_executable(${PROJECT_NAME} ${SOURCE_LIST}
         src/plat/netif_pcap.c
         src/net/net/dbg.h
         src/net/net/dbg.h
-        src/net/src/dbg.c)
+        src/net/src/dbg.c
+        src/net/net/nlist.h
+        src/net/net/nlist.h
+        src/net/src/nlist.c
+        src/net/net/mblock.h
+        src/net/net/nlocker.h
+        src/net/src/nlocker.c
+        src/net/src/mblock.c
+        src/net/src/mblock.c
+        src/net/net/net_cfg.h
+        src/net/net/sys.h
+        src/net/net/fixq.h
+        src/net/src/fixq.c)
 
 # 与一些库进行编译链接，生成最终的程序
 # 针对网络的平台配置
