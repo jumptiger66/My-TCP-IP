@@ -6,3 +6,5 @@
 - 2024/06/06:
 新增debug调试代码、assert代码
 
+- 2024/06/14:
+  新增 链表结构 nlist 及 node、内存管理模块 mblock、消息队列 fixq
